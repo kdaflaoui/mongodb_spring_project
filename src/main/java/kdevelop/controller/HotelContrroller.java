@@ -12,8 +12,13 @@ import java.util.List;
 @RestController
 @RequestMapping("api/hotels")
 public class HotelContrroller {
+
+    private final HotelRepository hotelRepository;
+
     @Autowired
-    private HotelRepository hotelRepository;
+    public HotelContrroller(HotelRepository hotelRepository) {
+        this.hotelRepository = hotelRepository;
+    }
 
     @GetMapping("/all")
     public List<Hotel> getAll(){

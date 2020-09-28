@@ -4,8 +4,6 @@ import kdevelop.entities.Address;
 import kdevelop.entities.Hotel;
 import kdevelop.entities.Review;
 import org.springframework.boot.CommandLineRunner;
-
-import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.List;
 
