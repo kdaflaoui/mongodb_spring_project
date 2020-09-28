@@ -1,6 +1,8 @@
 package kdevelop.entities;
 
 import java.util.List;
+
+
 @Document(collection = "Hotel")
 public class Hotel {
     @Id
