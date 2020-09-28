@@ -1,10 +1,12 @@
 package kdevelop.entities;
 
 import java.util.List;
-
+@Document(collection = "Hotel")
 public class Hotel {
+    @Id
     private String id;
     private String name;
+    @Indexed(direction = IndexDirection.ASCENDING)
     private double pricePerNight;
     private Address address;
     private List<Review> reviewList;
