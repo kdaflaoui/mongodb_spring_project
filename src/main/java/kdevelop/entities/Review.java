@@ -9,8 +9,7 @@ public class Review {
     public Review() {
     }
 
-    public Review(String id, String userName, int rating, boolean approved) {
-        this.id = id;
+    public Review(String userName, int rating, boolean approved) {
         this.userName = userName;
         this.rating = rating;
         this.approved = approved;
