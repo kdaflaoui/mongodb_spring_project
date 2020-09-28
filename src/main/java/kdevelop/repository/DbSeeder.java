@@ -4,9 +4,12 @@ import kdevelop.entities.Address;
 import kdevelop.entities.Hotel;
 import kdevelop.entities.Review;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
 import java.util.Arrays;
 import java.util.List;
 
+@Component
 public class DbSeeder implements CommandLineRunner {
 
     public DbSeeder(HotelRepository hotelRepository) {
