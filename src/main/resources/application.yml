@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      host: 192.168.2.14
+      port : 27017
+      database: hoteldb
+server:
+  port: 8082
+

@@ -1,0 +1,27 @@
+version: "3"
+services:
+  mymongo:
+    image: mongo:latest
+    container_name: mymongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
+  sprinngboot-mongo:
+    image: mongodb_sprong_project:1.0
+    container_name: sprigboot-mongodb
+    ports:
+      - "8082:8082"
+    links:
+      - mymongo
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: always
+    volumes:
+      - ./conf:/etc/nginx/conf.d
+      - ./html:/usr/share/nginx/html
+    ports:
+      - "80:80"
+    links:
+      - sprinngboot-mongo
